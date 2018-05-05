@@ -4,3 +4,7 @@ node_modules/
 3-react-redux.txt
 4-testing.txt
 5-deployment.txt
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
