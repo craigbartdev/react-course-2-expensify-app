@@ -4,4 +4,8 @@ node_modules/
 3-react-redux.txt
 4-testing.txt
 5-deployment.txt
+6-firebase
+7-firebase-redux
+.env.development
+.env.test
 public/dist/
