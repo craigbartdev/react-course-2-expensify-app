@@ -1,4 +1,7 @@
 node_modules/
+public/dist/
+.env.development
+.env.test
 1-react-router.txt
 2-redux.txt
 3-react-redux.txt
@@ -6,6 +9,3 @@ node_modules/
 5-deployment.txt
 6-firebase
 7-firebase-redux
-.env.development
-.env.test
-public/dist/
