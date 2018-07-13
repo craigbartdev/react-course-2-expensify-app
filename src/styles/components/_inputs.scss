@@ -1,0 +1,16 @@
+.text-input {
+    border: 1px solif #cacccd;
+    height: 50px; //padding gets added on
+    font-size: $font-size-large;
+    font-weight: 300;
+    padding: $s-size;
+}
+
+.select {  //for order selector to be equally sized as text
+    @extend .text-input;
+}
+
+.textarea {
+    @extend .text-input;
+    height: 10rem; //overwrite text input
+}

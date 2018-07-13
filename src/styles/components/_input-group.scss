@@ -1,0 +1,17 @@
+.input-group {
+    display: flex;
+    flex-direction: column; //for small screens
+    margin-bottom: $m-size; 
+
+    @media (min-width: $desktop-breakpoint) {
+        flex-direction: row; // for large screens
+        margin-bottom: $l-size;
+    }
+}
+
+.input-group__item {
+    margin-bottom: $s-size;
+    @media (min-width: $desktop-breakpoint) {
+        margin: 0 $s-size 0 0; //get rid of margin-bottom with right margin
+    }
+}
