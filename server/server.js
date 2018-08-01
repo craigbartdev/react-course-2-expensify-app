@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;  //for heroku or not
 
 app.use(express.static(publicPath));
 
-app.get('*', (req, res) => { //* means all paths
+app.get('*', (req, res) => { //* means all paths    this allows for multiple routes
     res.sendFile(path.join(publicPath, 'index.html'));
 });
 

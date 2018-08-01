@@ -11,7 +11,7 @@ beforeEach(() => {
     history = { push: jest.fn() };
     wrapper = shallow(
         <EditExpensePage 
-        startEditExpense={startEditExpense} 
+        startEditExpense={startEditExpense}
         startRemoveExpense={startRemoveExpense}
         history={history}
         expense={expenses[2]}
@@ -29,8 +29,8 @@ test('should handle editExpense', () => {
     expect(startEditExpense).toHaveBeenLastCalledWith(expenses[2].id, expenses[2]);
 });
 
-test('should handle startRemoveExpense', () => {
-    wrapper.find('button').simulate('click');
+test('should handle removeExpense', () => {
+    wrapper.find('ExpenseModal').prop('onRemove')(expenses[2]);
     expect(history.push).toHaveBeenLastCalledWith('/');
     expect(startRemoveExpense).toHaveBeenLastCalledWith({id: expenses[2].id});
 });

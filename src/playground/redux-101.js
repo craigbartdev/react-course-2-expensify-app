@@ -5,7 +5,7 @@ const incrementCount = ({ incrementBy = 1 } = {}) => ({ //destructuring
     incrementBy
 });
 
-const decrementCount = ({ decrementBy = 1} = {}) => ({
+const decrementCount = ({ decrementBy = 1 } = {}) => ({
     type: 'DECREMENT',
     decrementBy
 });

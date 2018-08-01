@@ -1,0 +1,28 @@
+keep working with react for info to stick.
+
+now time to make boilerplate
+duplicate expensify directory
+take stuff out other than auth stuff
+
+before git push do 
+rm -rf .git 
+to remove all git repo's for folder
+
+git init     to initialize then commit
+git remote add origin https://github.com/wavydomez/react-course-2-boilerplate.git
+git push -u origin master
+
+
+possible expensify app enhancements - show do you want to delete modal on remove.
+show number of hidden expenses in dashboard expense summary
+add support for facebook twitter or github login
+find a custom domain and configure it with heroku
+
+possible indecision app enhancements - deploy to web
+
+
+possible new project - blog. with login page like expensify.
+dashboard shows posts.
+/create has form for title and body.
+/edit has form for editing or removing. provides readable /read link
+anybody should be able to go to readable link without logging in.
