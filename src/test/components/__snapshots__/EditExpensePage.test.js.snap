@@ -36,11 +36,11 @@ exports[`should render EditExpensePage correctly 1`] = `
     >
       Remove Expense
     </button>
+    <ExpenseModal
+      modalAction={[Function]}
+      modalClose={[Function]}
+      modalVisible={false}
+    />
   </div>
-  <ExpenseModal
-    modalClose={[Function]}
-    modalVisible={false}
-    onRemove={[Function]}
-  />
 </div>
 `;

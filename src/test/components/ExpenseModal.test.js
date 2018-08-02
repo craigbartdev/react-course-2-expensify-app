@@ -2,15 +2,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ExpenseModal from '../../components/ExpenseModal';
 
-let onRemove, modalClose, wrapper;
+let modalAction, modalClose, wrapper;
 
 beforeEach(() => {
     modalClose = jest.fn();
-    onRemove = jest.fn();
+    modalAction = jest.fn();
     wrapper = shallow(
         <ExpenseModal
             modalVisible={true}
-            onRemove={onRemove}
+            modalAction={modalAction}
             modalClose={modalClose}
         />
     );
@@ -22,7 +22,7 @@ test('should render ExpenseModal correctly', () => {
 
 test('should test cancel button', () => {
     wrapper.find('button.remove').simulate('click');
-    expect(onRemove).toHaveBeenCalled();
+    expect(modalAction).toHaveBeenCalled();
 });
 
 test('should test cancel button', () => {

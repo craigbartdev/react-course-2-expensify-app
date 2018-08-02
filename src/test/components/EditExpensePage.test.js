@@ -30,7 +30,7 @@ test('should handle editExpense', () => {
 });
 
 test('should handle removeExpense', () => {
-    wrapper.find('ExpenseModal').prop('onRemove')(expenses[2]);
+    wrapper.find('ExpenseModal').prop('modalAction')(expenses[2]);
     expect(history.push).toHaveBeenLastCalledWith('/');
     expect(startRemoveExpense).toHaveBeenLastCalledWith({id: expenses[2].id});
 });

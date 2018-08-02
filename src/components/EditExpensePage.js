@@ -6,7 +6,7 @@ import { startRemoveExpense, startEditExpense } from '../actions/expenses';
 
 export class EditExpensePage extends React.Component {
     state = {
-        modalVisible: false
+        modalVisible: false,
     };
     onSubmit = (expense) => {
         this.props.startEditExpense(this.props.expense.id, expense);
@@ -16,7 +16,7 @@ export class EditExpensePage extends React.Component {
         this.props.startRemoveExpense({ id: this.props.expense.id });
         this.props.history.push('/');
     };
-    removeClick = () => {
+    modalShow = () => {
         this.setState(() => ({ modalVisible: true }));
     };
     modalClose = () => {
@@ -35,15 +35,15 @@ export class EditExpensePage extends React.Component {
                         expense={this.props.expense}
                         onSubmit={this.onSubmit}
                     />
-                    <button className="button button--secondary" onClick={this.removeClick}>
+                    <button className="button button--secondary" onClick={this.modalShow}>
                     Remove Expense
                     </button>
+                    <ExpenseModal
+                        modalVisible={this.state.modalVisible}
+                        modalAction={this.onRemove}
+                        modalClose={this.modalClose}
+                    />
                 </div>
-                <ExpenseModal
-                    modalVisible={this.state.modalVisible}
-                    onRemove={this.onRemove}
-                    modalClose={this.modalClose}
-                />
             </div>
         );
     }
